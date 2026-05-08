@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Projector } from "lucide-react";
 
 const navItems = [
   {
@@ -40,8 +40,11 @@ export const Navbar = () => {
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
         >
-          <span className="relative z-10">
-            <span className="text-glow text-foreground"> Mouloud </span>{" "}
+          <span className="relative z-10 flex items-center justify-center  gap-2">
+            <span className="text-glow text-foreground">
+              {" "}
+              <Projector />{" "}
+            </span>{" "}
             Portfolio
           </span>
         </a>
