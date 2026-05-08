@@ -1,4 +1,6 @@
-import { ThemeToggle } from "../components/ThemeToggle";
+import { Star } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { StarBackground } from "@/components/StarBackground";
 
 export const Home = () => {
   return (
@@ -6,7 +8,7 @@ export const Home = () => {
       {/* Theme Toggle */}
       <ThemeToggle />
       {/* Background Effects */}
-
+      <StarBackground />
       {/* Navbar */}
 
       {/* Main Content */}
