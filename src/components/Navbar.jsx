@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X, Projector } from "lucide-react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   {
@@ -31,8 +32,8 @@ export const Navbar = () => {
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
         isScrolled
-          ? "py-3 bg-background/80 backdrop-blur-md shadow-xs"
-          : "py-5",
+          ? "py-3 bg-background/95 backdrop-blur-xl shadow-md border-b border-border/50"
+          : "py-5 bg-background",
       )}
     >
       <div className="container flex items-center justify-between">
@@ -43,14 +44,14 @@ export const Navbar = () => {
           <span className="relative z-10 flex items-center justify-center  gap-2">
             <span className="text-glow text-foreground">
               {" "}
-              <Projector />{" "}
+              <Projector className="w-8 h-8 mb-2" />{" "}
             </span>{" "}
             Portfolio
           </span>
         </a>
 
         {/* desktop nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center gap-6 space-x-8">
           {navItems.map((item, key) => (
             <a
               key={key}
@@ -63,14 +64,17 @@ export const Navbar = () => {
         </div>
 
         {/* mobile nav */}
+        <div className="flex items-center gap-4">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+            className="md:hidden  text-foreground z-50"
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
-        <button
-          onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-          className="md:hidden  text-foreground z-50"
-          aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
         <div
           className={cn(
             "fixed inset-0 bg-background/95 background-blur-md z-40 flex flex-col items-center justify-center",
