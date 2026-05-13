@@ -169,28 +169,40 @@ export const SkillsSection = () => {
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-xl shadow-sm border hover:shadow-md transition-all duration-300"
+              className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-2xl
+                    border border-primary/50
+                    bg-card/60
+                    backdrop-blur-sm
+                    p-6
+                    shadow-[0_4px_20px_rgba(0,0,0,0.05)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-primary/40
+                    hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)]
+                  "
             >
-              {/* Header */}
-              <div className="flex items-center justify-between mb-3">
-                <h3 className="font-semibold text-lg">{skill.name}</h3>
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">
-                  {skill.level}
-                </span>
-              </div>
+              <div className="relative z-10">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-semibold text-lg">{skill.name}</h3>
 
-              {/* Description */}
-              <p className="text-sm text-muted-foreground mb-5">
-                {skill.description}
-              </p>
+                  <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">
+                    {skill.level}
+                  </span>
+                </div>
 
-              {/* Progress bar */}
-              <div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
-                <div
-                  className="bg-primary h-2 rounded-full animate-[grow_1.5s_ease-out]"
-                  style={{ width: `${skill.progress}%` }}
-                />
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {skill.description}
+                </p>
               </div>
             </div>
           ))}
