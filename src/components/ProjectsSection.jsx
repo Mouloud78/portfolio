@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 
 const projects = [
@@ -113,36 +113,32 @@ export const ProjectsSection = () => {
                 <div className="flex space-x-3">
                   <a
                     href={project.demoUrl}
+                    target="_blank"
                     className="text-foreground/80 hover:text-primary transition-colors duration-300"
                   >
-                    <ExternalLink />
+                    <ExternalLink size={20} />
                   </a>
-                  <a href={project.githubUrl}>
-                    <SiGithub />
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                  >
+                    <SiGithub size={20} />
                   </a>
                 </div>
               </div>
-
-              {/* <div className="flex gap-4">
-                <a
-                  href={project.demoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-primary text-primary-foreground rounded-md text-sm font-medium transition-colors duration-300 hover:bg-primary/90"
-                >
-                  Voir le projet
-                </a>
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-secondary text-secondary-foreground rounded-md text-sm font-medium transition-colors duration-300 hover:bg-secondary/90"
-                >
-                  Voir le code
-                </a>
-              </div> */}
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <a
+            className="cosmic-button w-fit flex items-center mx-auto gap-2"
+            href="https://github.com/Mouloud78?tab=repositories"
+            target="_blank"
+          >
+            Consultez mon Github <ArrowRight size={16} />
+          </a>
         </div>
       </div>
     </section>

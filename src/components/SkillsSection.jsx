@@ -38,68 +38,19 @@ const skills = [
     progress: 70,
     category: "Frontend",
   },
-  {
-    name: "Angular",
-    level: "En apprentissage",
-    description: "Services, composants, architecture Angular",
-    progress: 50,
-    category: "Frontend",
-  },
-  {
-    name: "Vue.js",
-    level: "En apprentissage",
-    description: "Bases des composants et réactivité",
-    progress: 55,
-    category: "Frontend",
-  },
-  {
-    name: "TailwindCSS",
-    level: "Intermédiaire",
-    description: "UI responsive et rapide",
-    progress: 65,
-    category: "Frontend",
-  },
 
   // Backend
   {
-    name: "Node.js",
+    name: "PHP",
     level: "Intermédiaire",
-    description: "Création d’API REST",
+    description: "Programmation backend, formulaires, API et logique serveur",
     progress: 65,
     category: "Backend",
   },
-  {
-    name: "Express",
-    level: "Intermédiaire",
-    description: "Routing, middleware, API",
-    progress: 60,
-    category: "Backend",
-  },
-  {
-    name: "Laravel",
-    level: "Intermédiaire",
-    description: "MVC, authentification, API",
-    progress: 65,
-    category: "Backend",
-  },
-  {
-    name: ".NET",
-    level: "Intermédiaire",
-    description: "API backend et architecture",
-    progress: 60,
-    category: "Backend",
-  },
-
   // Database
+
   {
-    name: "MongoDB",
-    level: "Intermédiaire",
-    description: "CRUD, collections, mongoose",
-    progress: 55,
-    category: "Database",
-  },
-  {
-    name: "PostgreSQL",
+    name: "MySQL",
     level: "Intermédiaire",
     description: "Requêtes SQL et relations",
     progress: 55,
@@ -130,13 +81,79 @@ const skills = [
   },
 ];
 
+const basic_skills = [
+  {
+    name: "Angular",
+    level: "En apprentissage",
+    description: "Services, composants, architecture Angular",
+    progress: 50,
+    category: "Frontend",
+  },
+  {
+    name: "Vue.js",
+    level: "En apprentissage",
+    description: "Bases des composants et réactivité",
+    progress: 55,
+    category: "Frontend",
+  },
+  {
+    name: "TailwindCSS",
+    level: "En apprentissage",
+    description: "UI responsive et rapide",
+    progress: 65,
+    category: "Frontend",
+  },
+  {
+    name: "MongoDB",
+    level: "En apprentissage",
+    description: "CRUD, collections, mongoose",
+    progress: 55,
+    category: "Database",
+  },
+  {
+    name: ".NET",
+    level: "En apprentissage",
+    description: "API backend et architecture",
+    progress: 60,
+    category: "Backend",
+  },
+  {
+    name: "Laravel",
+    level: "En apprentissage",
+    description: "MVC, authentification, API",
+    progress: 60,
+    category: "Backend",
+  },
+  {
+    name: "Node.js",
+    level: "En apprentissage",
+    description: "Création d’API REST",
+    progress: 65,
+    category: "Backend",
+  },
+  {
+    name: "Express",
+    level: "En apprentissage",
+    description: "Routing, middleware, API",
+    progress: 60,
+    category: "Backend",
+  },
+];
+
 const categories = ["all", "Frontend", "Backend", "Database", "Tools"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [activeBasicCategory, setActiveBasicCategory] = useState("all");
 
   const filteredSkills = skills.filter((skill) =>
     activeCategory === "all" ? true : skill.category === activeCategory,
+  );
+
+  const filteredBasicSkills = basic_skills.filter((basic_skill) =>
+    activeBasicCategory === "all"
+      ? true
+      : basic_skill.category === activeBasicCategory,
   );
 
   return (
@@ -187,7 +204,7 @@ export const SkillsSection = () => {
                   "
             >
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               <div className="relative z-10">
                 {/* Header */}
@@ -202,6 +219,71 @@ export const SkillsSection = () => {
                 {/* Description */}
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {skill.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center mt-12">
+          Mes <span className="text-primary">compétences de base</span>
+        </h2>
+
+        {/* Categories */}
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          {categories.map((category, key) => (
+            <button
+              key={key}
+              onClick={() => setActiveBasicCategory(category)}
+              className={cn(
+                "px-5 py-2 rounded-full transition-all duration-300 capitalize border",
+                activeBasicCategory === category
+                  ? "bg-primary text-primary-foreground border-primary"
+                  : "bg-card hover:bg-primary/10 border-border",
+              )}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        {/* Basic Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          {filteredBasicSkills.map((basic_skill, key) => (
+            <div
+              key={key}
+              className="
+                    group
+                    relative
+                    overflow-hidden
+                    rounded-2xl
+                    border border-primary/50
+                    bg-card/60
+                    backdrop-blur-sm
+                    p-6
+                    shadow-[0_4px_20px_rgba(0,0,0,0.05)]
+                    transition-all
+                    duration-300
+                    hover:-translate-y-1
+                    hover:border-primary/40
+                    hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)]
+                  "
+            >
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+              <div className="relative z-10">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-3">
+                  <h3 className="font-semibold text-lg">{basic_skill.name}</h3>
+
+                  <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium border border-primary/20">
+                    {basic_skill.level}
+                  </span>
+                </div>
+
+                {/* Description */}
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {basic_skill.description}
                 </p>
               </div>
             </div>
