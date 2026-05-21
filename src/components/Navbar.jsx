@@ -5,12 +5,12 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   {
-    name: "Home",
+    name: "Accueil",
     href: "#hero",
   },
-  { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
-  { name: "Projects", href: "#projects" },
+  { name: "À propos", href: "#about" },
+  { name: "Compétences", href: "#skills" },
+  { name: "Projets", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -32,11 +32,11 @@ export const Navbar = () => {
       className={cn(
         "fixed w-full z-40 transition-all duration-300",
         isScrolled
-          ? "py-3 bg-background/95 backdrop-blur-xl shadow-md border-b border-border/50"
+          ? "py-3 bg-background/95 backdrop-blur-xl shadow-md border-b border-border/50 "
           : "py-5 bg-background",
       )}
     >
-      <div className="container flex items-center justify-between">
+      <div className="container flex items-center justify-between ">
         <a
           className="text-xl font-bold text-primary flex items-center"
           href="#hero"
