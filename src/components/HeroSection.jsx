@@ -34,6 +34,7 @@ export const HeroSection = () => {
         </div>
       </div>
       <div className="absolute bottom-8 left-1/2 transform-translate-x-1/2 flex flex-col items-center animate-bounce">
+        Scroll
         <ArrowBigDown className="h-5 w-5 text-primary" />
       </div>
     </section>
