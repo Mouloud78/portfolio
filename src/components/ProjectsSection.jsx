@@ -5,28 +5,52 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Personnel",
-    description: "Un site web pour présenter mes compétences et projets.",
+    description:
+      "Portfolio moderne développé avec React et Tailwind CSS pour présenter mes projets, compétences et expériences avec une interface responsive et des animations interactives.",
     image: "/projects/portfolio.png",
     tags: ["React", "Tailwind CSS"],
     demoUrl: "#",
     githubUrl: "#",
   },
+
   {
     id: 2,
-    title: "social-media-app",
+    title: "Shopping Card",
     description:
-      "Une application de réseau social pour le collège pour le partage d'articles, de documents et d'images.",
-    image: "/projects/social-maisonneuve.png",
-    tags: ["Laravel", "HTML", "CSS "],
+      "Application e-commerce frontend avec système de filtrage dynamique, recherche de produits et interface responsive développée en React.",
+    image: "/projects/shopping-card.png",
+    tags: ["React", "CSS"],
     demoUrl: "#",
     githubUrl: "#",
   },
 
   {
     id: 3,
+    title: "Airbnb Clone",
+    description:
+      "Reproduction de la page d’accueil d’Airbnb afin de pratiquer l’intégration UI moderne, le responsive design et l’organisation de composants React.",
+    image: "/projects/airbnb-clone.png",
+    tags: ["React", "Tailwind CSS"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+
+  {
+    id: 4,
+    title: "Social Media App",
+    description:
+      "Plateforme collaborative développée pour un projet scolaire permettant le partage d’articles, documents et images entre étudiants.",
+    image: "/projects/social-maisonneuve.png",
+    tags: ["Laravel", "HTML", "CSS"],
+    demoUrl: "#",
+    githubUrl: "#",
+  },
+
+  {
+    id: 5,
     title: "Vino",
     description:
-      "Une application de gestion de cave à vin pour suivre les bouteilles, les dégustations et les notes.",
+      "Application de gestion de cave à vin permettant le suivi des bouteilles, des dégustations et des notes personnelles avec une interface dynamique.",
     image: "/projects/vino.png",
     tags: ["Laravel", "Vue.js", "CSS"],
     demoUrl: "#",
@@ -34,31 +58,32 @@ const projects = [
   },
 
   {
-    id: 4,
-    title: "clone pourvoiries du Québec",
+    id: 6,
+    title: "Clone Pourvoiries du Québec",
     description:
-      "Un clone de deux pages du site web des pourvoiries du Québec pour pratiquer mes compétences en développement web.",
+      "Reproduction de plusieurs pages du site Pourvoiries du Québec afin de pratiquer l’intégration responsive, le positionnement CSS et le développement frontend.",
     image: "/projects/pourvoirie-quebec.png",
-    tags: ["HTML", "CSS", "javascript"],
+    tags: ["HTML", "CSS", "JavaScript"],
     demoUrl: "#",
     githubUrl: "#",
   },
 
   {
-    id: 5,
-    title: "travel-agency",
+    id: 7,
+    title: "Travel Agency",
     description:
-      "Un site web pour une agence de voyage fictive, avec des pages de destination, d'ajout de destination, de modification et de suppression.",
+      "Application web de gestion de destinations touristiques avec fonctionnalités d’ajout, modification et suppression de contenu.",
     image: "/projects/travel-agency.png",
-    tags: ["React.js", "HTML", "CSS"],
+    tags: ["React", "HTML", "CSS"],
     demoUrl: "#",
     githubUrl: "#",
   },
+
   {
-    id: 6,
-    title: "lord-stampee",
+    id: 8,
+    title: "Lord Stampee",
     description:
-      "Un projet de développement d'une application web pour la gestion d'une boutique en ligne de timbres.",
+      "Projet de boutique en ligne pour la gestion et la vente de timbres avec fonctionnalités de catalogue, navigation et gestion de contenu.",
     image: "/projects/Lord-stampee.png",
     tags: ["PHP", "HTML", "CSS"],
     demoUrl: "#",

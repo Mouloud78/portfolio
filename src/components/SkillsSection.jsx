@@ -2,140 +2,122 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
+  // ================= FRONTEND =================
   {
     name: "HTML",
-    level: "Avancé",
-    description: "Structure sémantique, accessibilité, responsive",
-    progress: 85,
+    description:
+      "Maîtrise de la structure sémantique des pages web, accessibilité (ARIA) et intégration de layouts responsive.",
     category: "Frontend",
   },
   {
     name: "CSS",
-    level: "Avancé",
-    description: "Flexbox, Grid, animations, responsive design",
-    progress: 80,
+    description:
+      "Flexbox, CSS Grid, animations et responsive design pour créer des interfaces modernes et adaptatives.",
+    category: "Frontend",
+  },
+  {
+    name: "TailwindCSS",
+    description:
+      "Utilisation de classes utilitaires pour développer rapidement des interfaces UI modernes et responsives.",
     category: "Frontend",
   },
   {
     name: "JavaScript",
-    level: "Intermédiaire",
-    description: "ES6+, DOM, API REST, async/await",
-    progress: 70,
+    description:
+      "Manipulation du DOM, ES6+, appels API REST et gestion de logique asynchrone avec async/await.",
     category: "Frontend",
   },
   {
     name: "TypeScript",
-    level: "Intermédiaire",
-    description: "Typage, interfaces, composants React",
-    progress: 65,
+    description:
+      "Ajout de typage statique, interfaces et amélioration de la robustesse du code dans les projets React.",
     category: "Frontend",
   },
   {
     name: "React",
-    level: "Intermédiaire",
-    description: "Hooks, routing, composants réutilisables",
-    progress: 70,
+    description:
+      "Développement d'interfaces dynamiques avec composants réutilisables, hooks (useState, useEffect) et routing.",
+    category: "Frontend",
+  },
+  {
+    name: "Angular",
+    description:
+      "Développement d'interfaces dynamiques avec composants, services et architecture d'applications Angular.",
     category: "Frontend",
   },
 
-  // Backend
+  // ================= BACKEND =================
   {
     name: "PHP",
-    level: "Intermédiaire",
-    description: "Programmation backend, formulaires, API et logique serveur",
-    progress: 65,
+    description:
+      "Développement backend avec gestion des formulaires, logique serveur et création d’API simples.",
     category: "Backend",
   },
-  // Database
+  {
+    name: "Node.js",
+    description:
+      "Création d’API REST et développement backend JavaScript avec gestion des requêtes et middleware.",
+    category: "Backend",
+  },
+  {
+    name: "Express",
+    description:
+      "Construction d’API REST structurées avec routing, middleware et gestion des requêtes HTTP.",
+    category: "Backend",
+  },
 
+  // ================= DATABASE =================
   {
     name: "MySQL",
-    level: "Intermédiaire",
-    description: "Requêtes SQL et relations",
-    progress: 55,
+    description:
+      "Conception de bases de données relationnelles et exécution de requêtes SQL avec jointures et filtres.",
     category: "Database",
   },
   {
     name: "SQL",
-    level: "Intermédiaire",
-    description: "Jointures, filtres, requêtes",
-    progress: 60,
+    description:
+      "Écriture de requêtes avancées, gestion des relations et manipulation des données structurées.",
     category: "Database",
   },
 
-  // Tools
+  // ================= TOOLS =================
   {
     name: "Git/GitHub",
-    level: "Intermédiaire",
-    description: "Versioning et collaboration",
-    progress: 70,
+    description:
+      "Gestion de versions, collaboration en équipe et suivi des projets via Git et GitHub.",
     category: "Tools",
   },
   {
     name: "VS Code",
-    level: "Avancé",
-    description: "Extensions, debugging, productivité",
-    progress: 85,
+    description:
+      "Environnement de développement optimisé avec extensions, debugging et productivité améliorée.",
     category: "Tools",
   },
 ];
 
 const basic_skills = [
   {
-    name: "Angular",
-    level: "En apprentissage",
-    description: "Services, composants, architecture Angular",
-    progress: 50,
-    category: "Frontend",
-  },
-  {
     name: "Vue.js",
-    level: "En apprentissage",
-    description: "Bases des composants et réactivité",
-    progress: 55,
-    category: "Frontend",
-  },
-  {
-    name: "TailwindCSS",
-    level: "En apprentissage",
-    description: "UI responsive et rapide",
-    progress: 65,
+    description:
+      "En cours d'apprentissage : réactivité, directives et structure de composants Vue.",
     category: "Frontend",
   },
   {
     name: "MongoDB",
-    level: "En apprentissage",
-    description: "CRUD, collections, mongoose",
-    progress: 55,
+    description:
+      "En cours d'apprentissage : bases NoSQL, collections et opérations CRUD avec Mongoose.",
     category: "Database",
   },
   {
     name: ".NET",
-    level: "En apprentissage",
-    description: "API backend et architecture",
-    progress: 60,
+    description:
+      "En cours d'apprentissage : création d’API backend et compréhension de l’architecture .NET.",
     category: "Backend",
   },
   {
     name: "Laravel",
-    level: "En apprentissage",
-    description: "MVC, authentification, API",
-    progress: 60,
-    category: "Backend",
-  },
-  {
-    name: "Node.js",
-    level: "En apprentissage",
-    description: "Création d’API REST",
-    progress: 65,
-    category: "Backend",
-  },
-  {
-    name: "Express",
-    level: "En apprentissage",
-    description: "Routing, middleware, API",
-    progress: 60,
+    description:
+      "En cours d'apprentissage : architecture MVC, authentification et développement d’API REST.",
     category: "Backend",
   },
 ];
