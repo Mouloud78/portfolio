@@ -32,7 +32,7 @@ export const ContactSection = () => {
             </h3>
 
             <a
-              href="/CV_Mouloud.pdf"
+              href="/Mouloud_CV.pdf"
               download
               className="
                 inline-flex
