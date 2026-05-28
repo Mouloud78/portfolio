@@ -9,8 +9,8 @@ const projects = [
       "Portfolio moderne développé avec React et Tailwind CSS pour présenter mes projets, compétences et expériences avec une interface responsive et des animations interactives.",
     image: "/projects/portfolio.png",
     tags: ["React", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://portfolio-xi-mauve-77.vercel.app/",
+    githubUrl: "https://github.com/Mouloud78/portfolio",
   },
 
   {
@@ -20,8 +20,8 @@ const projects = [
       "Application e-commerce frontend avec système de filtrage dynamique, recherche de produits et interface responsive développée en React.",
     image: "/projects/shopping-card.png",
     tags: ["React", "CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://shopping-card-with-filtring-957s.vercel.app/",
+    githubUrl: "https://github.com/Mouloud78/shopping-card-with-filtring",
   },
 
   {
@@ -31,8 +31,8 @@ const projects = [
       "Reproduction de la page d’accueil d’Airbnb afin de pratiquer l’intégration UI moderne, le responsive design et l’organisation de composants React.",
     image: "/projects/airbnb-clone.png",
     tags: ["React", "Tailwind CSS"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://airbnb-clone-reactjs-silk.vercel.app/",
+    githubUrl: "https://github.com/Mouloud78/airbnbClone-reactjs",
   },
 
   {
@@ -43,7 +43,7 @@ const projects = [
     image: "/projects/social-maisonneuve.png",
     tags: ["Laravel", "HTML", "CSS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Mouloud78/maisonneuve-2595298",
   },
 
   {
@@ -54,7 +54,7 @@ const projects = [
     image: "/projects/vino.png",
     tags: ["Laravel", "Vue.js", "CSS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Mouloud78/projet-equipe",
   },
 
   {
@@ -64,8 +64,8 @@ const projects = [
       "Reproduction de plusieurs pages du site Pourvoiries du Québec afin de pratiquer l’intégration responsive, le positionnement CSS et le développement frontend.",
     image: "/projects/pourvoirie-quebec.png",
     tags: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "https://pourvoiriesquebectp3.vercel.app/",
+    githubUrl: "https://github.com/Mouloud78/pourvoiriesquebectp3",
   },
 
   {
@@ -74,9 +74,9 @@ const projects = [
     description:
       "Application web de gestion de destinations touristiques avec fonctionnalités d’ajout, modification et suppression de contenu.",
     image: "/projects/travel-agency.png",
-    tags: ["React", "HTML", "CSS"],
+    tags: ["Vue.js", "HTML", "CSS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Mouloud78/travel-agency",
   },
 
   {
@@ -87,7 +87,7 @@ const projects = [
     image: "/projects/Lord-stampee.png",
     tags: ["PHP", "HTML", "CSS"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/Mouloud78/lord_stampee",
   },
 ];
 
